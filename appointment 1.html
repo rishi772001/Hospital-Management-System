@@ -1,100 +1,11 @@
-<html>
-
-<head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>RRV Hospitals</title>
-        <meta name="keywords" content="RRV Hospitals">
-        <meta name="description" content="Developed By Rishi Raj G">
-        <style>
-                .aa {
-                        width: 1000px;
-                        height: 250px;
-                }
-        </style>
-</head>
-
-<body>
-        <img src="assets/images/logo.png" class="logo">
-        <nav class="navbar navbar-expand-lg" style="background-color: #142b47;color:white;">
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                        <a class="nav-link" href="index.html">Home <span
-                                                        class="sr-only">(current)</span></a>
-                                </li>
-
-                                <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                SignUp
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="signup as doctor.html">SignUp as
-                                                        Doctor</a>
-                                                <a class="dropdown-item" href="signup as patient.html">SignUp as
-                                                        Patient</a>
-                                        </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Log In
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="login as doctor.html">LogIn as Doctor</a>
-                                                <a class="dropdown-item" href="login as patient.html">LogIn as
-                                                        Patient</a>
-                                        </div>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link active " href="appointment 1.html">Book An Appointment</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="list of doctors.php">Doctors Here!</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="index.html#contact">Contact Us</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="about.html">About Us</a>
-                                </li>
-                        </ul>
-                </div>
-        </nav>
-
-        <center>
-                <h1 style="color:red;font-size: 60px;margin-top: 50px;">You Need To login First To Book An Appointment
-                        Here</h1>
-                <div class="aa" style="background-color:rgba(0,0,0,0.5);">
-
-                        <ul style="font-size: xx-large;color: #f2f2f2;text-decoration: none;">
-                                <li>
-                                        <p>New Patient,Then Sign Up<a href="signup as patient.html">Here.</a></p>
-                                </li>
-                                <li>
-                                        <p>Returning Patient,Then please Login<a href="login as patient.html">Here.</a>
-                                        </p>
-                                </li>
-                                <li>
-                                        <p>Clinic Admin/Staff,Then please Login<a href="login as doctor.html">Here.</a>
-                                        </p>
-                                </li>
-                        </ul>
-                </div>
-        </center>
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+<?php
+    session_start();
+    if(isset($_SESSION["name"]))
+    {
+        echo "<script>window.location='patient dashboard.php';</script>";
+    }
+    else
+    {
+        echo "<script>window.location='login as patient.html';</script>";
+    }
+?>
