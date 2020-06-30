@@ -96,7 +96,7 @@
                                         </div>
                                 </li>
                                 <li class="nav-item">
-                                        <a class="nav-link" href="appointment 1.html">Book An Appointment</a>
+                                        <a class="nav-link" href="appointment 1.php">Book An Appointment</a>
                                 </li>
                                 <li class="nav-item">
                                         <a class="nav-link" href="list of doctors.php">Doctors Here!</a>
