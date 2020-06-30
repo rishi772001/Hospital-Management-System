@@ -48,7 +48,7 @@
                                         </div>
                                 </li>
                                 <li class="nav-item">
-                                        <a class="nav-link" href="appointment 1.html">Book An Appointment</a>
+                                        <a class="nav-link" href="appointment 1.php">Book An Appointment</a>
                                 </li>
                                 <li class="nav-item active ">
                                         <a class="nav-link" href="list of doctors.php">Doctors Here!</a>
@@ -63,52 +63,61 @@
                 </div>
         </nav>
     <h1 style="color:black;font-size: 45px;">Our Doctors Here!</h1>
-    <table border="1">
-        <tr>
-            <th>Doctor Id</th>
-            <th>Name</th>
+    <div class="container">
+        <div class="table-responsive">
+                <table class="table table-hover">
+                        <thead class="thead-dark">
+                                <tr>
+                                        <th>Doctor Id</th>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th>Phone Number</th>
+                                        <th>Qualification</th>
+                                        <th>Department</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <?php
+                                        $conn=mysqli_connect("localhost:33","root","","php");
+                                        $sql="select * from doctors";
+                                        $result=$conn->query($sql);
+                                        if($result->num_rows>0){
+                                        while($row=$result->fetch_assoc()){
+                                        echo"
+                                        <tr>
+                                                <td>
+                                                ".$row["docid"]."
+                                                </td>
+                                                <td>
+                                                ".$row["name"]."
+                                                </td>
+                                                <td>
+                                                ".$row["address"]."
+                                                </td>
+                                                <td>
+                                                ".$row["phno"]."
+                                                </td>
+                                                <td>
+                                                ".$row["qualification"]."
+                                                </td>
+                                                <td>
+                                                ".$row["department"]."
+                                                </td>
+                                        </tr>";
+                                        }
+                                        echo"</table>";
+                                        }
+                                        else{
+                                        echo"0 result";
+                                        }
+                                        $conn->close();
+                                ?>
+                        </tbody>
+                </table>
+        </div>
+    </div>
 
-            <th>Address</th>
-            <th>Phone Number</th>
-            <th>Qualification</th>
-            <th>Department</th><br>
-        </tr>
-            <?php
-            $conn=mysqli_connect("localhost","root","","php");
-            $sql="select * from doctors";
-            $result=$conn->query($sql);
-            if($result->num_rows>0){
-            while($row=$result->fetch_assoc()){
-            echo"
-            <tr>
-                <td>
-                    ".$row["docid"]."
-                </td>
-                <td>
-                    ".$row["name"]."
-                </td>
-                <td>
-                    ".$row["address"]."
-                </td>
-                <td>
-                    ".$row["phno"]."
-                </td>
-                <td>
-                    ".$row["qualification"]."
-                </td>
-                <td>
-                    ".$row["department"]."
-                </td>
-            </tr>";
-            }
-            echo"</table>";
-            }
-            else{
-            echo"0 result";
-            }
-            $conn->close();
-            ?>
-    </table>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
