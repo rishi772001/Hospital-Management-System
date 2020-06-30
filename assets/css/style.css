@@ -1,0 +1,167 @@
+body {
+    background-image: url("../Images/hospital back.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.aa {
+    width: 450px;
+    height: 950px;
+    margin: 0 auto;
+    margin-top: 120px;
+    color: white;
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+.aa input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+input[type="phone"] {
+    width: 300px;
+    height: 50px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 100%;
+    height: 100px;
+}
+
+table {
+    border-collapse: separate;
+    width: 100%;
+    color: orange;
+    font-size: 25px;
+    border-color: white;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.navbar {
+    color: yellow;
+    font-size: 18px;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 242, 0, 0.8);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 242, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.nav-link {
+    color: yellow;
+}
+
+.nav-link:hover,
+.active {
+    color: yellow;
+    border-bottom: 2px solid rgb(0, 183, 255);
+}
+
+.sub {
+    position: fixed;
+    margin: 1%;
+
+}
+
+.app {
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    animation-name: anime;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+.app:hover {
+    height: 130px;
+    width: 130px;
+    animation-name: none;
+}
+
+@keyframes anime {
+    0% {
+        transform: scale(0.75);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+
+
+.main {
+    margin-top: 50px;
+}
+
+.container-fluid {
+    margin-left: 10px !important;
+}
+
+.whyrrv {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin: 20px;
+}
+
+.img img {
+    margin: 20px 0px;
+}
+
+.advice {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+#contact {
+    background-color: #142b47;
+    margin-top: 100px;
+    color: yellow;
+    font-size: 25px;
+}
+
+#contact .inner1,
+.inner3 {
+    padding: 30px;
+    font-size: 20px;
+}
+
+.inner2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.inner2 input[type=text] {
+    width: 300px;
+}
+
+
+.address {
+    padding-left: 15px;
+}
+
+.develop {
+    float: right;
+}
+
+.content {
+    padding-top: 20px;
+}
