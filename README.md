@@ -6,4 +6,4 @@ This project is done by
   2.Vikkram Adithya.K<br>
   3.Rishi Kumar.R<br>
  <br>
-I've developed this Hospital management system as my mini project in my first year of UG to maintain the patient records, manage appointments and various other needs of the hospital. This project made me to learn many new stuffs like SQL, PHP etc..
+We've developed this Hospital management system as my mini project in my first year of UG to maintain the patient records, manage appointments and various other needs of the hospital. This project made me to learn many new stuffs like SQL, PHP etc.. <a href="https://rishi772001.github.io/Hospital-Management-System/">Click here</a> to view front end for this project.
