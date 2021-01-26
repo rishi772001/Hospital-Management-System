@@ -78,9 +78,9 @@
                                                 SignUp
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="signup as doctor.html">SignUp as
+                                                <a class="dropdown-item" href="signup/signup as doctor.html">SignUp as
                                                         Doctor</a>
-                                                <a class="dropdown-item" href="signup as patient.html">SignUp as
+                                                <a class="dropdown-item" href="signup/signup as patient.html">SignUp as
                                                         Patient</a>
                                         </div>
                                 </li>
@@ -90,8 +90,8 @@
                                                 Log In
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="login as doctor.html">LogIn as Doctor</a>
-                                                <a class="dropdown-item" href="login as patient.html">LogIn as
+                                                <a class="dropdown-item" href="login/login as doctor.html">LogIn as Doctor</a>
+                                                <a class="dropdown-item" href="login/login/login as patient.html">LogIn as
                                                         Patient</a>
                                         </div>
                                 </li>
@@ -112,7 +112,7 @@
         </nav>
         <?php 
 		if (!isset($_SESSION["name"])) {
-		echo "<script>window.location='login as doctor.html'</script>";
+		echo "<script>window.location='login/login as doctor.html'</script>";
                 }
         ?>
         <div class="container-fluid" style="padding: 30px 20px 0px 40px;">

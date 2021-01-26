@@ -1,8 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost","root","","php");
-if(!$conn){
-die("Database Connect Error");
-}
+require "conn.php";
 
 
 
@@ -16,35 +13,27 @@ $prescription_path=$prescription['tmp_name'];
 
 
 $folder="prescription upload/";
-move_uploaded_file($prescription_path,$folder.$prescription_name);
+move_uploaded_file($prescription_path, $folder.$prescription_name);
 $today=date("Y-m-d");
 $query="SELECT * FROM prescription WHERE name='$name'";
 $result=$conn->query($query);
 
-if($result->num_rows==0){
+if ($result->num_rows==0) {
     $sql="INSERT INTO prescription (name,filename,date) VALUES ('$name','$prescription_name','$today')";
 
-    if(mysqli_query($conn,$sql)){
-    echo"<script type='text/javascript'>window.alert('Prescription uploaded successfully');window.location='admin dashboard.php';</script>";
+    if (mysqli_query($conn, $sql)) {
+        echo"<script type='text/javascript'>window.alert('Prescription uploaded successfully');window.location='admin dashboard.php';</script>";
+    } else {
+        echo"<script type='text/javascript'>window.alert('Something went wrong :(');window.location='admin dashboard.php';</script>";
     }
-    else{
-        echo"error1";    
-    }
-}
-else{
+} else {
     $sql="UPDATE prescription SET filename='$prescription_name' ";
 
-    if(mysqli_query($conn,$sql)){
-    echo"<script type='text/javascript'>window.alert('Prescription uploaded successfully');window.location='admin dashboard.php';</script>";
-    }
-    else{
-        echo"error2";    
+    if (mysqli_query($conn, $sql)) {
+        echo"<script type='text/javascript'>window.alert('Prescription uploaded successfully');window.location='admin dashboard.php';</script>";
+    } else {
+        echo"<script type='text/javascript'>window.alert('Something went wrong :(');window.location='admin dashboard.php';</script>";
     }
 }
     
 
-
-mysqli_close($conn);
-
-
-?>

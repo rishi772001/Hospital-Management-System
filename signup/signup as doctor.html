@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RRV Hospitals</title>
+    <meta name="keywords" content="RRV Hospitals" />
+    <meta name="description" content="Developed By Rishi Raj G" />
+    <style>
+      .aa {
+        width: 450px;
+        height: 1000px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script>
+  </head>
+
+  <body>
+    <img src="../assets/Images/logo.png" class="logo" />
+
+    <div id="nav-placeholder"></div>
+
+    <div class="aa" style="background-color: rgba(0, 0, 0, 0.5)">
+      <form method="post" action="signup/signup as doctor.php">
+        <h1 style="color: skyblue">SIGN UP</h1>
+        <input
+          type="text"
+          name="name"
+          placeholder="Please Enter Your Name...."
+          required
+        /><br /><br />
+        DOB:<input
+          type="date"
+          name="dob"
+          placeholder="Please Enter Your Date Of Birth...."
+          required
+        /><br /><br />
+        <input
+          type="text"
+          name="docid"
+          placeholder="Please Enter Your Doctor Id...."
+          required
+        /><br /><br />
+        <input
+          type="email"
+          name="mail"
+          placeholder="Please Enter Your Mail Id...."
+          required
+        /><br /><br />
+        <input
+          type="text"
+          name="address"
+          placeholder="Please Enter Your Address...."
+          required
+        /><br /><br />
+        <input
+          type="text"
+          name="phno"
+          placeholder="Please Enter Your Phone number...."
+          required
+        /><br /><br />
+        <input
+          type="text"
+          name="qualification"
+          placeholder="Please Enter Your Qualification...."
+          required
+        /><br /><br />
+        <input
+          type="text"
+          name="department"
+          placeholder="Please Enter Your Depatment...."
+          required
+        /><br /><br />
+        <input
+          type="text"
+          name="uname"
+          placeholder="Please Enter Username...."
+          required
+        /><br /><br />
+        <input
+          type="password"
+          name="pass"
+          id="pass"
+          placeholder="Please Enter Password...."
+          required
+        /><br /><br />
+        <input
+          type="password"
+          name="repass"
+          id="rpass"
+          placeholder="Please Re Enter Password...."
+          required
+        /><br /><br />
+        <input
+          type="submit"
+          value="SIGN UP"
+          onclick="pass()"
+          name="submit"
+          style="background-color: skyblue"
+        />
+        <p style="font-size: 25px">
+          Already a User then,Click <a href="login/login as doctor.html">here</a> to
+          log in.
+        </p>
+      </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

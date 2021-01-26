@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RRV Hospitals</title>
+    <meta name="keywords" content="RRV Hospitals" />
+    <meta name="description" content="Developed By Rishi Raj G" />
+
+    <style>
+      .aa {
+        width: 450px;
+        height: 350px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script>
+  </head>
+
+  <body>
+    <img src="../assets/images/logo.png" class="logo" />
+
+    <div id="nav-placeholder"></div>
+
+    <div class="aa" style="background-color: rgba(0, 0, 0, 0.5)">
+      <form method="post" action="login/login as doctor.php">
+        <h1 style="color: skyblue">LOGIN</h1>
+        <input
+          type="text"
+          name="uname"
+          placeholder="Please Enter Username...."
+        /><br /><br />
+        <input
+          type="password"
+          name="pass"
+          placeholder="Please Enter Password...."
+        /><br /><br />
+        <input
+          type="submit"
+          value="LOGIN"
+          name="submit"
+          class="btn_login"
+          style="background-color: skyblue"
+        />
+        <p style="font-size: 18px">
+          New User then,Click <a href="signup/signup as doctor.html">here</a> to Sign
+          in.
+        </p>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

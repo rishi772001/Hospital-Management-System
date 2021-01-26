@@ -6,6 +6,6 @@
     }
     else
     {
-        echo "<script>window.location='login as patient.html';</script>";
+        echo "<script>window.location='login/login as patient.html';</script>";
     }
 ?>
