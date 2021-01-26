@@ -53,6 +53,12 @@
             margin-bottom: 30px;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script>
 </head>
 
 <body>
@@ -61,56 +67,7 @@ session_start();
 require "conn.php";
 ?>
     <img src="assets/images/logo.png" class="logo">
-    <nav class="navbar navbar-expand-lg" style="background-color: #142b47;color:white;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        SignUp
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="signup/signup as doctor.html">SignUp as
-                            Doctor</a>
-                        <a class="dropdown-item" href="signup/signup as patient.html">SignUp as
-                            Patient</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown active ">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Log In
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="login/login as doctor.html">LogIn as Doctor</a>
-                        <a class="dropdown-item" href="login/login/login as patient.html">LogIn as
-                            Patient</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="appointment 1.php">Book An Appointment</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="list of doctors.php">Doctors Here!</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#contact">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <?php
 if (!isset($_SESSION["name"])) {
@@ -120,9 +77,9 @@ if (!isset($_SESSION["name"])) {
         <div class="row">
             <div class="col-md-10">
                 <?php
-                        echo "<h3>Welcome  ";
-                        echo $_SESSION["name"];
-                    ?>
+                    echo "<h3>Welcome  ";
+                    echo $_SESSION["name"];
+                ?>
             </div>
             <div class="col-md-2">
 
@@ -142,12 +99,20 @@ if (!isset($_SESSION["name"])) {
             <div class="aa col-md-8">
                 <h1>Book An Appointment Here!</h1>
                 <form action="appointment 2.php" method="post">
-                    <h5>Select Date : <input type="text" name="date" placeholder="DD/MM/YYYY"
-                            onfocus="(this.type='date')" onblur="(this.type='text')" required><br><br></h5>
-                    <h5>Enter Username : <input type="text" placeholder="Enter Username" value="<?php $username = $_SESSION["name"];
-echo $username;?>" name="username" required><br><br></h5>
+                    <h5>Select Date : 
+                        <input type="text" name="date" placeholder="DD/MM/YYYY"
+                            onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                        <br><br>
+                    </h5>
 
-                    <h5>Select Doctor : <select name="doctor_name" class="doctor_list" required>
+                    <h5>Enter Username : 
+                        <input type="text" placeholder="Enter Username" 
+                        value="<?php $username = $_SESSION["name"];echo $username;?>" 
+                        name="username" required><br><br>
+                    </h5>
+
+                    <h5>Select Doctor : 
+                        <select name="doctor_name" class="doctor_list" required>
                             <?php
                                 $sql = "select * from doctors";
                                 $doc = mysqli_query($conn, $sql);
@@ -159,8 +124,8 @@ echo $username;?>" name="username" required><br><br></h5>
                                 <?php echo $row["name"]; ?>
                             </option><br><br>
                             <?php
-}
-?>
+                            }
+                            ?>
                         </select>
                     </h5><br>
 
@@ -238,7 +203,6 @@ $r = $res->fetch_assoc();
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

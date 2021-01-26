@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require "conn.php";
+require "../conn.php";
 if (isset($_POST['uname'])) {
     $uname=$_POST['uname'];
     $password=$_POST['pass'];
@@ -12,7 +12,7 @@ if (isset($_POST['uname'])) {
 
     if ($result->num_rows==1) {
         $_SESSION["name"] = $uname;
-        $url="patient dashboard.php";
+        $url="../patient dashboard.php";
         header('location:'.$url);
     } else {
         echo"<script type='text/javascript'>window.alert('Invalid Username or Password');window.location='login/login/login as patient.html';</script>";
